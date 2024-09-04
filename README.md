@@ -1,14 +1,14 @@
-- Crie o ambiente virtual (venv)
-  python -m venv venv (Windows)
-  
-- Ative o ambiente virtual
-  venv/Scripts/Activate
+> Crie o ambiente virtual (venv)
+- python -m venv venv (Windows)
 
-- Instale o Django
-  pip install django
+> Ative o ambiente virtual
+- venv/Scripts/Activate
 
-- Rode o 'servidor' para testar a aplicação
-  python manage.py runserver
+> Instale o Django
+- pip install django
 
-- Acesse pelo localhost porta 8000
-  127.0.0.1:8000
+> Rode o 'servidor' para testar a aplicação
+- python manage.py runserver
+
+> Acesse pelo localhost porta 8000
+- 127.0.0.1:8000
