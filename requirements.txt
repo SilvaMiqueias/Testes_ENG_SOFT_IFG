@@ -1,0 +1,10 @@
+﻿attrs==24.2.0
+colorama==0.4.6
+docker-composer==2.17.4
+gunicorn==23.0.0
+loguru==0.7.2
+packaging==24.1
+win32-setctime==1.1.0
+Django==4.2.1
+djangorestframework==3.13.1
+
