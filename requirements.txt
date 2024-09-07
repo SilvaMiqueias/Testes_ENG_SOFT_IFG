@@ -7,4 +7,6 @@ packaging==24.1
 win32-setctime==1.1.0
 Django==4.2.1
 djangorestframework==3.13.1
+pip install coverage
+
 
