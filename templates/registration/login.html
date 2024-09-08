@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="login row">
+    <div class="col-md-3" style="align-content: center">
+        <h2>Login</h2>
+    </div>
+    <div class="col-md-9">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

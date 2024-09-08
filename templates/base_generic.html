@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        {% if user.is_authenticated %}
+            <nav class="nav">
+
+                <a href="{% url 'index' %}" class="nav-link">Home</a>
+                <a href="{% url 'teste' %}" class="nav-link">Teste</a>
+                    <form class="nav-link" action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-logout" >Logout</button>
+                    </form>
+            </nav>
+        {% endif %}
+
+
+    </div>
+</header>
+
+<div class="container content">
+    <main>
+        {% block content %}
+        <!-- O conteúdo das páginas será inserido aqui -->
+        {% endblock %}
+    </main>
+</div>
+
+
+<footer>
+<!--    <p>&copy; 2024 Meu Site</p>-->
+</footer>
+
+<!-- Scripts do Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
