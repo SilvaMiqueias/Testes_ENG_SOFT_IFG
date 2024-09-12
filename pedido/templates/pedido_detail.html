@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h3>Pedido</h3>
+</div>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <label>Descrição:</label>
+        <input disabled value="{{ pedido.descricao }}">
+    </div>
+    <div class="col-md-6">
+        <label>Categoria:</label>
+        <input disabled value="{{ pedido.categoria.nome }}">
+    </div>
+</div>
+<div class="actions">
+    <a href="{% url 'pedido_list' %}" class="fa fa-arrow-left"> Voltar</a>
+    <a href="{% url 'pedido_update' pedido.pk %}" class="fa fa-pencil"></a>
+    <a href="{% url 'pedido_delete' pedido.pk %}" class="fa fa-trash"></a>
+</div>
+
+{% endblock %}

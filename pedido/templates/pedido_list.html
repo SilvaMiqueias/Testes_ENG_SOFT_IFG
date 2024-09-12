@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="mb-5">
+    <h1>Lista de Pedidos</h1>
+</div>
+<div class="">
+    <a href="{% url 'pedido_create' %}" class="btn-create">Novo Pedido</a>
+</div>
+<div class="mt-4">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Descrição</th>
+            <th scope="col">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pedido in pedidos %}
+        <tr>
+            <td>{{ pedido.descricao }}</td>
+            <td class="actions">
+                <a href="{% url 'pedido_detail' pedido.pk %}" class="fa fa-eye" data-toggle="tooltip" data-placement="bottom" title="Visualizar"></a>
+                <a href="{% url 'pedido_update' pedido.pk %}" class="fa fa-pencil" data-toggle="tooltip" data-placement="bottom" title="Editar"></a>
+                <a href="{% url 'pedido_delete' pedido.pk %}" class="fa fa-trash" data-toggle="tooltip" data-placement="bottom" title="Deletar"></a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+

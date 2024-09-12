@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2 style="text-align: center">Registrar</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'login' %}" class="btn-cancel">Cancelar</a>
+    <button type="submit" class="btn-custom">Registrar</button>
+</form>
+{% endblock %}

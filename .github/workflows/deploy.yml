@@ -26,22 +26,22 @@ jobs:
 
      #Teste e Cobertura
 
-#      - name: Run migrations
-#        run: |
-#          python manage.py migrate
-#
-#      - name: Run tests with coverage
-#        run: |
-#          coverage run -m pytest
-#          coverage report
-#          coverage html
-#        env:
-#          DJANGO_SETTINGS_MODULE: your_project_name.settings
-#
-#      - name: Upload coverage report to Codecov
-#        uses: codecov/codecov-action@v3
-#        with:
-#          files: coverage.xml
+      - name: Run migrations
+        run: |
+          python manage.py migrate
+
+      - name: Run tests with coverage
+        run: |
+          coverage run -m pytest
+          coverage report
+          coverage html
+        env:
+          DJANGO_SETTINGS_MODULE: your_project_name.settings
+
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: coverage.xml
 
      #Deploy heroku
 
