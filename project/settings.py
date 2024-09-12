@@ -31,6 +31,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'crud',
+    'categoria',
+    'pedido',
+    'user',
 ]
 
 SITE_ID = 1

@@ -51,6 +51,13 @@ input{
     border-radius: 5px;
 }
 
+select{
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 nav {
     background-color: #003366;
     padding: 10px;
@@ -75,4 +82,62 @@ nav .nav-link{
     background: #ffffff;
     width: 100px;
     padding: 10px;
+}
+
+.return a{
+    text-decoration: none !important;
+    border-radius: 5px;
+    border: 1px solid #888888;
+    padding: 13px;
+    color: red;
+    width: 100px;
+}
+
+.btn-create{
+    background-color: #ffffff;
+    color: #3e8f3e;
+    border-radius: 3px;
+    width: 140px;
+    padding: 10px;
+    border: 1px solid #888888;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-create:hover{
+    text-decoration: none;
+    background-color:  #3e8f3e;
+    color: #ffffff;
+}
+
+
+.bt-cancel{
+    border-radius: 5px;
+    color: #880000;
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #888888;
+    font-weight: 500;
+}
+
+.btn-custom:hover{
+    font-weight: 700;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.actions a{
+    text-decoration: none !important;
+}
+
+.fa-eye{
+    color: #3e8f3e;
+}
+
+.fa-trash{
+    color: #ac2925;
 }

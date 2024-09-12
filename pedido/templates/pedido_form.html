@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>{% if form.instance.pk %}Atualizar{% else %}Criar{% endif %} Pedido</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <div class="return mt-4">
+        <a href="{% url 'pedido_list' %}"> <span class="fa fa-arrow-left"></span>  Voltar</a>
+        <button type="submit" class="btn-custom">Salvar</button>
+    </div>
+</form>
+
+
+{% endblock %}
