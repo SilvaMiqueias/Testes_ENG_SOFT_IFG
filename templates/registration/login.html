@@ -3,15 +3,19 @@
 {% block content %}
 <div class="login row">
     <div class="col-md-3" style="align-content: center">
-        <h2>Login</h2>
+        {% load static %}
+        <img src="{% static 'image/logo.png' %}" style="width: 200px; height: 200px" alt="Logo">
     </div>
     <div class="col-md-9">
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Entrar</button>
+            <div class="mt-4  buttons">
+                <button type="submit">Entrar</button>
+                <a href="{% url 'register' %}" class="btn-cancel" >Registrar</a>
+            </div>
+
         </form>
-        <a href="{% url 'register' %}" style="padding: 10px">registrar</a>
     </div>
 </div>
 {% endblock %}
