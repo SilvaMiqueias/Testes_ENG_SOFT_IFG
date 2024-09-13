@@ -3,14 +3,21 @@
 }
 
 .login{
-    margin-top: 40px;
+    margin-top: 25%;
     display: flex;
-    text-align: -webkit-center;
+    justify-content: center;
 
-    background-color: #003366;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid #f2d2d2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 24px;
-    color: #ffffff;
+    color: #003366;
+
+    & label{
+        text-align: start !important;
+    }
 }
 
 
@@ -21,9 +28,12 @@
         border-radius: 5px;
         color: #003366;
         width: 100px;
+        font-weight: 700;
+        border: 1px solid #003366;
     }
     & button:hover{
-        font-weight: 700;
+        color: #3e8f3e;
+        border: 1px dashed #3e8f3e;
     }
 }
 
@@ -31,6 +41,7 @@ input{
     outline: none;
     box-shadow: none;
     padding: 10px;
+    border: 1px solid #003366;
 }
 
 form{
@@ -42,6 +53,7 @@ form{
     outline: none;
     box-shadow: none;
     padding: 10px;
+    border: 1px solid #003366;
    }
 }
 
@@ -82,6 +94,13 @@ nav .nav-link{
     background: #ffffff;
     width: 100px;
     padding: 10px;
+    border: 1px solid #003366;
+    font-weight: 700;
+}
+
+.btn-custom:hover{
+    color:  #3e8f3e;
+    border: 1px dashed #3e8f3e;
 }
 
 .return a{
@@ -108,20 +127,26 @@ nav .nav-link{
     text-decoration: none;
     background-color:  #3e8f3e;
     color: #ffffff;
+    border: 1px dashed #3e8f3e;
 }
 
 
-.bt-cancel{
+.btn-cancel{
     border-radius: 5px;
-    color: #880000;
+    color: #003366;
     background: #ffffff;
     padding: 10px;
-    border: 1px solid #888888;
-    font-weight: 500;
+    border: 1px solid #003366;
+    display: flex;
+    justify-content: center;
+    text-decoration: none !important;
+    width: 100px;
+    font-weight: 700;
 }
 
-.btn-custom:hover{
-    font-weight: 700;
+.btn-cancel:hover{
+    color: #880000;
+    border: 1px dashed #880000;
 }
 
 .actions{
@@ -140,4 +165,21 @@ nav .nav-link{
 
 .fa-trash{
     color: #ac2925;
+}
+
+.btn-register a{
+    text-decoration: none !important;
+    color: #003366;
+    font-weight: 700;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    padding: 6px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.btn-register a:hover{
+    color: #3e8f3e;
 }
