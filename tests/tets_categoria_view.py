@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Categoria
-from .forms import CategoriaForm
+from .forms import Categoria
 from .views import Categoria
 
 class CategoriaViewTest(TestCase):
@@ -28,7 +28,7 @@ class CategoriaViewTest(TestCase):
         response = self.client.get(reverse('categoria_create'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'categoria_form.html')
-        self.assertIsInstance(response.context['form'], CategoriaForm)
+        self.assertIsInstance(response.context['form'], categoria_form)
 
     def test_categoria_create_view_post(self):
         response = self.client.post(reverse('categoria_create'), data={'nome': 'Nova Categoria'})
@@ -40,7 +40,7 @@ class CategoriaViewTest(TestCase):
         response = self.client.get(reverse('categoria_update', args=[self.categoria.pk]))
         self.assertEqual(response.status_code, 302)
         self.assertTemplateUsed(response, 'categoria_form.html')
-        self.assertIsInstance(response.context['form'], CategoriaForm)
+        self.assertIsInstance(response.context['form'], categoria_form)
 
     def test_categoria_update_view_post(self):
         response = self.client.post(reverse('categoria_update', args=[self.categoria.pk]), data={'nome': 'Categoria Atualizada'})

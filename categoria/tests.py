@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from .models import Categoria
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .forms import Categoria
+from .forms import CategoriaForm
 from .views import Categoria
 # Create your tests here.
 
@@ -15,14 +15,14 @@ class CategoriaModelTest(TestCase):
          self.client.login(username='testuser', password='12345')
 
      def test_categoria_list_view(self):
-         response = self.client.get(reverse('categoria.views'))
-         self.assertEqual(response.status_code, 302)
+         response = self.client.get(reverse('categoria_list'))
+         self.assertEqual(response.status_code, 200)
          self.assertTemplateUsed(response, 'categoria_list.html')
          self.assertContains(response, 'Teste Categoria')
 
      def test_categoria_detail_view(self):
-         response = self.client.get(reverse('categoria_list', args=[self.categoria.pk]))
-         self.assertEqual(response.status_code, 302)
+         response = self.client.get(reverse('categoria_detail', args=[self.categoria.pk]))
+         self.assertEqual(response.status_code, 200)
          self.assertTemplateUsed(response, 'categoria_detail.html')
          self.assertContains(response, 'Teste Categoria')
 
