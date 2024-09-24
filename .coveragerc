@@ -1,9 +1,23 @@
 [run]
-source = tests
+source = .
 
 [report]
-include = */tests/*
-omit = */migrations/*
+
+omit =
+    */migrations/*
+    */venv/*
+    */settings.py
+    */__init__.py
+    */crud/*
+    */project/*
+    */manage.py
+    */forms.py
+    */urls.py
+    */admin.py
+    */apps.py
+    */tests/*
+    */views.py
+
 
 
 [html]
