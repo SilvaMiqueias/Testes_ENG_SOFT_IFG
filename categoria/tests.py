@@ -6,6 +6,7 @@ from .forms import CategoriaForm
 from .views import Categoria
 # Create your tests here.
 
+
 class CategoriaModelTest(TestCase):
 
      def setUp(self):
